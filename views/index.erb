@@ -1,0 +1,7 @@
+<h1>Set-Times</h1>
+
+<ul>
+  <% @venues.each do |key, venue| %>
+    <li><a href="<%= key %>"><%= venue["name"] %></a></li>
+  <% end %>
+</ul>
