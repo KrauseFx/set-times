@@ -8,6 +8,9 @@
 
   </head>
   <body>
+    <div id="footer">
+      Build by <a href="https://krausefx.com" target="_blank">Felix Krause</a>
+    </div>
     <div id="content">
 <style type="text/css">html, body {
   margin: 0;
@@ -32,6 +35,8 @@ h1, h2, h3, h4, p {
   width: 340px;
   margin-left: auto;
   margin-right: auto;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 
 b {
@@ -77,6 +82,21 @@ a {
 
 li {
   margin-bottom: 6px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0px;
+  text-align: right;
+  color: #999;
+  padding: 20px;
+  right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  #footer {
+    display: none;
+  }
 }
 </style><h1>Set-Times</h1>
 
