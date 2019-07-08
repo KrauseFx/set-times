@@ -1,8 +1,9 @@
 {
   "name": "Brooklyn Mirage",
-  "type": "club",
   "main-set": {
     "start": "01:30",
     "end": "03:00"
-  }
+  },
+  "facebook": "BrooklynMirage",
+  "address": "140 Stewart Ave, Brooklyn, NY 11237"
 }

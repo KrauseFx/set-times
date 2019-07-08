@@ -2,6 +2,8 @@
 
 <ul>
   <% @venues.each do |key, venue| %>
-    <li><a href="<%= key %>"><%= venue["name"] %></a></li>
+    <li><a href="<%= key %>.html"><%= venue["name"] %></a></li>
   <% end %>
 </ul>
+
+<%= File.read("./views/contribute.html") %>

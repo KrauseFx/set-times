@@ -13,14 +13,20 @@ task :build do
     @venues[File.basename(file, ".*")] = content
   end
 
+  style = '<style type="text/css">' + File.read("assets/style.css") + '</style>'
+
   # render index.html
-  result = ERB.new(File.read("views/index.erb")).result(binding)
+  result = File.read("views/head.html")
+  result += style
+  result += ERB.new(File.read("views/index.erb")).result(binding)
   File.write("html/index.html", result)
 
   @venues.each do |key, venue|
     @venue = venue
-    result = ERB.new(File.read("views/detail.erb")).result(binding)
+
+    result = File.read("views/head.html")
+    result += style
+    result += ERB.new(File.read("views/detail.erb")).result(binding)
     File.write(File.join("html", "#{key}.html"), result)
   end
-  
 end
